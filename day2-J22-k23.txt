@@ -330,8 +330,44 @@ broadcast:
 trustwave.COM
 
 
+HOW TO CONFIGURE MSP LOUD ROUTERS.
 
 
+
+For Telus
+@D1
+
+config t
+vlan 27
+ name Telus.com
+ exit
+Int vlan 27
+ no shut
+ ip add 10.0.16.1 255.255.240.0
+ip dhcp excluded-add 10.0.16.1 10.0.16.100
+ip dhcp pool Telus.com
+ network 10.0.16.0 255.255.240.0
+ default-router 10.0.16.1
+ domain-name Telus.com
+ dns-server 10.32.1.10
+ option 150 ip 10.32.100.8
+
+end
+
+!In real world, ang mga c at telepono nkakabit sa access switch.
+@A2 Switch
+
+ conf t
+ Int e1/0
+  swi access vlan 26
+  do sh ip dhcp binding
+
+@P2
+conf t
+int e1/0
+    no shut
+    ip add dhcp
+    end
 
 
 
