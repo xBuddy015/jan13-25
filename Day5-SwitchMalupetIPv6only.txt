@@ -494,7 +494,7 @@ config t
 hostname PLDT-ITO
 Track 1 Int gi 0/1 line-protocol
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.32.1.6
 standby 1 preempt
 standby 1 Priority 150
 standby 1 Track 1 decrement 60
@@ -512,7 +512,7 @@ COREBABA/GLOBE:
 config t
 hostname GLOBE-ITO
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.32.1.6
 standby 1 preempt
 standby 1 Priority 100
 end
@@ -545,7 +545,7 @@ VRRP 10 preempt
 VRRP 10 Priority 100
 
 
-TASK17: Port-Aggregation/Etherchannel: 100% exam LAB!!!
+TASK17: Port-Aggregation/Etherchannel: 100% exam LAB!!!  JANUARY 2025
 LACP:LINK AGGREGATION CONTROL PROTOCOL = ieee worldStandrad
 cisco = PortAggregationProtocol: PaGP
 Combinding Two/More Layer 2 links AS ONE! Unite/UNITY
@@ -556,6 +556,14 @@ Int Range fa0/10-12
  channel-protocol Lacp
  do sh etherchannel summary
  do sh int po1 | inc BW
+
+!ANG TAONG SEGURISTA KELANGAN MAGTRUNK | USUALLY TRUNK ALREADY INHERITED 
+BUT MAKE SURE BY SH INT TRUNK
+conf t
+int port-channel 1
+switchport trunk encaps dot1q
+switchport mode trunk
+switchport trunk allowed vlan 1-100
 
 TASK18: HOW TO RETAIN ALL THE INFORMATION:
 HOW TO GET CERTIFIED IN 2025!!!!
