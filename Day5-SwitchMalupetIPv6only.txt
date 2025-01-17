@@ -249,6 +249,7 @@ TASK5: HOW TO SPOT A VERY HEALTHY SWITCH?
 super healthy: "all flashing green."
 amber/orange: needs help. - you are protected
 
+Panno magnakaw legally:
 create vlans,
 transfer ports to vlans
 delete the vlan
@@ -273,7 +274,7 @@ config t
 spanning-tree vlan 1-999
 end
 
-TASK7: HOW TO BECOME A WORLD-CLASS NETWORK ENGINEER
+TASK7: HOW TO BECOME A WORLD-CLASS NETWORK ENGINEER / 3years experience
 SPECIALIZING IN SWITCH:
 Master the 4 super Hereos of Switching
 Qpid: 802.1Q:trunking
@@ -306,6 +307,9 @@ wireshark = bridge priority is 32768 = very Hackable!
 " bobo/inutil ang Network Engineer nyo sa company!"
 Protect the Most Important SWitch in your 
 Office: RootBridge = TAAS, 2ndRootBridge = BABA:
+32768 root identifier = means hackable no protected
+24576 = secured root identifier (check in STP in wireshark)
+28672 = addict 
 TAAS:/d1       32786 --> 24576
 Config t
 spanning-tree mode pvst
@@ -336,7 +340,7 @@ who is darna: 802.1d
 kabit PC = 30s
 putol trunk, recover =30s, acceptable? BANK,HOst,Pol,Mil
 
-TASK10: Rapid Spanning-tree Protocol: 802.1w
+TASK10: Rapid Spanning-tree Protocol: 802.1w-----------------------------
 TAAs/BABA: tikam si wonderWoman/bilis labasan
 config t
 spanning-tree Mode Rapid-pvst
@@ -363,10 +367,10 @@ end
 #sh int status err-disabled 
 TAAS: bounce/UP/down, bring BACK TO LIFE.
 config t
-int fa 0/3
+int fa 0/1
  shut
  no shut
-int fa 0/7
+int fa 0/5
  shut
  no shut
 end
